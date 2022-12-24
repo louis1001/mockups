@@ -1,3 +1,31 @@
+/*              Logo                */
+main {
+	text-align: center;
+}
+
+h1 {
+	-webkit-user-select: none;
+	user-select: none;
+	font-size: 5rem;
+}
+
+.blue-logo {
+	color: #5383EC;
+}
+
+.red-logo {
+	color: #D85140;
+}
+
+.yellow-logo {
+	color: #F1BE42;
+}
+
+.green-logo {
+	color: #58A55C;
+}
+
+/*             Footer               */
 html, body {
 	margin: 0;
 	padding: 0;
