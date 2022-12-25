@@ -17,6 +17,10 @@ body {
 
 
 /*              Nav                 */
+nav {
+	display: flex;
+	justify-content: space-between;
+}
 nav>ul {
 	display: flex;
 	justify-content: flex-end;
@@ -50,7 +54,7 @@ nav .cto {
 	border-radius: 5px;
 	font-size: 1.1em;
 	max-height: max-content;
-	margin: 0 5px;
+	margin: 0 8px 0 0;
 }
 
 nav .cto>a {
@@ -62,13 +66,15 @@ nav .cto>a {
 /*              Logo                */
 main {
 	text-align: center;
+	margin-bottom: 120px;
 }
 
 h1 {
 	-webkit-user-select: none;
 	user-select: none;
 	font-size: 5rem;
-	margin: 2rem 0;
+	margin: 0;
+	margin-bottom: 3rem;
 	padding: 0;
 }
 
@@ -90,12 +96,16 @@ h1 {
 
 
 /*           Search Bar             */
+#search {
+	max-width: 580px;
+	margin: 0 auto;
+}
+
 #search-bar {
 	display: flex;
 	align-items: center;
 	border-radius: 500px;
 	box-shadow: 0 0 1px var(--main-gray);
-	max-width: 550px;
 	margin: 0 auto;
 }
 
@@ -125,6 +135,7 @@ h1 {
 	justify-content: center;
 	list-style: none;
 	margin: 2em 0;
+	padding: 0;
 }
 
 #action-buttons a {
