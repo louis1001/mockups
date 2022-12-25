@@ -1,3 +1,64 @@
+/*            General               */
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	--main-gray: #70757a;
+}
+
+
+/*              Nav                 */
+nav>ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1.6em;
+	list-style: none;
+	padding: 12px 10px;
+	margin: 0;
+}
+
+nav li {
+	font-size: 13px;
+}
+
+nav .application {
+	display: inline-block;
+}
+
+nav .application>li {
+/*	padding: 0 3px;*/
+}
+
+nav .icon>a {
+	font-size: 1.5rem;
+	color: var(--main-gray);
+}
+
+nav .cto {
+	background: #1a73e8;
+	color: white;
+	border-radius: 5px;
+	font-size: 1.1em;
+	max-height: max-content;
+	margin: 0 5px;
+}
+
+nav .cto>a {
+	padding: 0.6em 1.5em;
+	display: inline-block;
+}
+
+
 /*              Logo                */
 main {
 	text-align: center;
@@ -26,23 +87,9 @@ h1 {
 }
 
 /*             Footer               */
-html, body {
-	margin: 0;
-	padding: 0;
-	font-family: arial, sans-serif;
-	font-size: 14px;
-}
-
-body {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
 footer {
 	background: #f2f2f2;
-	color: #70757a;
+	color: var(--main-gray);
 }
 
 footer>div {
@@ -61,7 +108,7 @@ footer .links {
 	margin: 0 .5em;
 }
 
-.links a, .links a:visited {
+a, a:visited {
 	text-decoration: none;
 	color: inherit;
 
