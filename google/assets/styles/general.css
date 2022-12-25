@@ -21,6 +21,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 }
+
 nav>ul {
 	display: flex;
 	justify-content: flex-end;
@@ -167,15 +168,16 @@ h1 {
 	padding: 0;
 }
 
-#action-buttons a {
+#action-buttons input[type="submit"] {
 	display: inline-block;
 	padding: .8em 1.5em;
 	background: #f8f9fa;
 	border-radius: 5px;
 	text-decoration: none;
+	cursor: pointer;
 }
 
-#action-buttons a:hover {
+#action-buttons input[type="submit"]:hover {
 	box-shadow: 0 .4px 2px #999c;
 }
 

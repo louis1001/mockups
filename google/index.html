@@ -13,7 +13,10 @@
 		<nav>
 			<!-- Navigation Bar -->
 			<ul>
-				<li class="application"><a href="#">louis1001</a></li>
+				<li class="application signature" style="text-align: center; opacity: 0.6;">
+					Mockup in a day by <br>
+					<a href="https://louis1001.dev">👨🏽‍💻 louis1001</a>
+				</li>
 			</ul>
 			<ul>
 				<li class="application"><a href="#">Gmail</a></li>
@@ -41,8 +44,8 @@
 
 			<!-- Search Buttons -->
 			<ul id="action-buttons">
-				<li><a href="#">Google Search</a></li>
-				<li><a href="#">I'm Feeling Lucky</a></li>
+				<li><input type="submit" id="do-search" value="Google Search"/></li>
+				<li><input type="submit" id="feeling-lucky" value="I'm Feeling Lucky"/></li>
 			</ul>
 		</section>
 	</main>
@@ -66,5 +69,29 @@
 			</ul>
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+		const searchBar = document.getElementById('query')
+
+		function doSearch(suffix = "") {
+			const query = searchBar.value
+			const escaped = encodeURIComponent(query)
+
+			let googleUrl = "https://www.google.com/search?q=" + escaped + suffix
+
+			location.href = googleUrl
+		}
+
+		const searchButton = document.getElementById('do-search')
+		const luckyButton = document.getElementById('feeling-lucky')
+		searchButton.addEventListener('click', ()=>doSearch())
+		luckyButton.addEventListener('click', ()=>doSearch("&btnI"))
+
+		searchBar.addEventListener('keydown', (event) => {
+			if (event.keyCode == 13) {
+				doSearch()
+			}
+		})
+	</script>
 </body>
 </html>
