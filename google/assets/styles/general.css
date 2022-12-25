@@ -39,9 +39,9 @@ nav .application>li {
 /*	padding: 0 3px;*/
 }
 
-nav .icon>a {
-	font-size: 1.5rem;
-	color: var(--main-gray);
+nav .icon img {
+	width: 24px;
+	height: 24px;
 }
 
 nav .cto {
