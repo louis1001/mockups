@@ -43,9 +43,27 @@ nav .application>li {
 /*	padding: 0 3px;*/
 }
 
+nav .icon {
+	position: relative;
+}
+
 nav .icon img {
 	width: 24px;
 	height: 24px;
+}
+
+nav .icon:hover:before {
+	content: "";
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #4441;
+	z-index: -1;
+	transform: scale(1.7);
 }
 
 nav .cto {
@@ -57,9 +75,15 @@ nav .cto {
 	margin: 0 8px 0 0;
 }
 
+nav .cto:hover {
+	background: #1b66c9;
+	box-shadow: 0 0 4px #999c;
+}
+
 nav .cto>a {
 	padding: 0.6em 1.5em;
 	display: inline-block;
+	text-decoration: none;
 }
 
 
@@ -105,8 +129,12 @@ h1 {
 	display: flex;
 	align-items: center;
 	border-radius: 500px;
-	box-shadow: 0 0 1px var(--main-gray);
+	box-shadow: 0 0 2px #888b;
 	margin: 0 auto;
+}
+
+#search-bar:hover, #search-bar:focus-within {
+	box-shadow: 0 0 8px #8887;
 }
 
 #search-bar img {
@@ -143,6 +171,11 @@ h1 {
 	padding: .8em 1.5em;
 	background: #f8f9fa;
 	border-radius: 5px;
+	text-decoration: none;
+}
+
+#action-buttons a:hover {
+	box-shadow: 0 .4px 2px #999c;
 }
 
 #action-buttons li {
@@ -175,7 +208,10 @@ footer .links {
 a, a:visited {
 	text-decoration: none;
 	color: inherit;
+}
 
+a:hover {
+	text-decoration: underline;
 }
 
 footer ul {
