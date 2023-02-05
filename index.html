@@ -18,7 +18,7 @@
 
 		<main>
 			<ul id="project-list">
-				<li class="project-item" l-project-id="google">
+				<li class="project-item">
 					<div class="small-item">
 						<a href="/google">
 							<h4>Google search page</h4>
@@ -29,7 +29,7 @@
 						</a>
 					</div>
 					
-					<div class="wide-item">
+					<div class="wide-item" l-project-id="google">
 						<h4>Google search page</h4>
 						<a href="/general_assets/inspiration/google.png">
 							<img width="15" height="15" src="/general_assets/icons/link-icon.svg" alt="🔗">
@@ -49,7 +49,7 @@
 	</div>
 
 	<script>
-		const projects = document.querySelectorAll(".project-item")
+		const projects = document.querySelectorAll(".project-item .wide-item")
 
 		projects.forEach(p => {
 			let id = p.getAttribute('l-project-id')
