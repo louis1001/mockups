@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Design immitation</title>
+	<title>Design (L)imitation</title>
 
 	<link rel="stylesheet" href="general_assets/styles/landing.css">
 </head>
@@ -18,23 +18,9 @@
 
 		<main>
 			<ul id="project-list">
-				<li class="project-item">
+				<li class="project-item" l-project-id="google">
 					<h4>Google search page</h4>
 					<a href="/general_assets/inspiration/google.png">
-						<img width="15" height="15" src="/general_assets/icons/link-icon.svg" alt="🔗">
-						inspiration
-					</a>
-				</li>
-				<li class="project-item">
-					<h4>Placeholder project</h4>
-					<a href="#">
-						<img width="15" height="15" src="/general_assets/icons/link-icon.svg" alt="🔗">
-						inspiration
-					</a>
-				</li>
-				<li class="project-item">
-					<h4>Placeholder project</h4>
-					<a href="#">
 						<img width="15" height="15" src="/general_assets/icons/link-icon.svg" alt="🔗">
 						inspiration
 					</a>
@@ -49,6 +35,24 @@
 			</section>
 		</main>
 	</div>
+
+	<script>
+		const projects = document.querySelectorAll(".project-item")
+
+		projects.forEach(p => {
+			let id = p.getAttribute('l-project-id')
+			p.addEventListener('pointerup', () => {
+				handleProject(id)
+			})
+		})
+
+		function handleProject(id) {
+			if (!id || !id.length) { return }
+
+			let url = "/" + id
+			window.location.assign(url)
+		}
+	</script>
 </body>
 
 </html>
